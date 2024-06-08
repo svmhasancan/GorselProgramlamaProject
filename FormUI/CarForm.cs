@@ -63,6 +63,11 @@ namespace FormUI
             dgwCars.DataSource = carsTable;
         }
 
+        private void ListCarsByCarName(string searchText)
+        {
+            dgwCars.DataSource = linqCarDal.GetCars(searchText);
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             linqCarDal.Add(new Car
@@ -72,7 +77,8 @@ namespace FormUI
                 Name = tbxName.Text,
                 ModelYear = Convert.ToInt32(tbxModelYear.Text),
                 DailyPrice = Convert.ToInt32(tbxDailyPrice.Text),
-                Description = tbxDescription.Text
+                Description = tbxDescription.Text,
+                IsRented = false
             });
             MessageBox.Show("Araba Eklendi");
             ClearInputs();
@@ -114,9 +120,12 @@ namespace FormUI
                 Name = tbxNameUpdate.Text,
                 ModelYear = Convert.ToInt32(tbxModelYearUpdate.Text),
                 DailyPrice = Convert.ToInt32(tbxDailyPriceUpdate.Text),
-                Description = tbxDescriptionUpdate.Text
+                Description = tbxDescriptionUpdate.Text,
+                IsRented = false
             };
             linqCarDal.Update(car);
+
+            ClearInputs();
             LoadCars();
             MessageBox.Show("Araç Güncellendi!");
         }
@@ -127,6 +136,20 @@ namespace FormUI
             linqCarDal.Delete(id);
             MessageBox.Show("Araç Silindi!");
             LoadCars();
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = tbxSearch.Text;
+            
+            if (string.IsNullOrEmpty(searchText))
+            {
+                LoadCars();
+            }
+            else
+            {
+                ListCarsByCarName(searchText);
+            }
         }
     }
 }

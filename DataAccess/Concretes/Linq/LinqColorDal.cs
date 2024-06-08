@@ -18,11 +18,11 @@ namespace DataAccess.Concretes.Linq
         public DataTable GetAll()
         {
             ConnectionControl();
-            // veri adaptörü
+            
             SqlDataAdapter dataAdapter = new SqlDataAdapter("Select * from Colors", connection);
-            //veri tablosu
+            
             DataTable dataTable = new DataTable();
-            // veriyi doldur
+            
             dataAdapter.Fill(dataTable);
             return dataTable;
         }
@@ -37,8 +37,6 @@ namespace DataAccess.Concretes.Linq
 
         public void Add(Color color)
         {
-
-            // Id hatası var
             ConnectionControl();
             SqlCommand command1 = new SqlCommand("SET IDENTITY_INSERT Colors ON",connection);
             SqlCommand command = new SqlCommand("INSERT INTO Colors(ColorId, ColorName) VALUES(@colorId, @colorName)", connection);
@@ -69,6 +67,24 @@ namespace DataAccess.Concretes.Linq
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
             connection.Close();
+        }
+
+        public DataTable GetColor(string key)
+        {
+            ConnectionControl();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Colors WHERE ColorName LIKE @searchedText", connection);
+
+            command.Parameters.AddWithValue("@searchedText","%"+key+"%");
+
+            DataTable dataTable = new DataTable();
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+            dataAdapter.Fill(dataTable);
+
+            connection.Close();
+            return dataTable;
         }
     }
 }

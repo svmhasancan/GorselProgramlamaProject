@@ -59,6 +59,25 @@ namespace DataAccess.Concretes.Linq
             connection.Close();
         }
 
+        public DataTable GetBrand(string searchedText)
+        {
+            ConnectionControl();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Brands WHERE BrandName LIKE @searchedText", connection);
+
+            command.Parameters.AddWithValue("@searchedText","%"+searchedText+"%");
+
+            DataTable dataTable = new DataTable();
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+            dataAdapter.Fill(dataTable);
+
+            connection.Close();
+
+            return dataTable;
+        }
+
         private void ConnectionControl()
         {
             if (connection.State == ConnectionState.Closed)

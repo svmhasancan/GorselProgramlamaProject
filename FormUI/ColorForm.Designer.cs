@@ -34,7 +34,7 @@
             this.tbxColorName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbxColorSearch = new System.Windows.Forms.TextBox();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
             this.dgwColors = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnColorUpdate = new System.Windows.Forms.Button();
@@ -102,12 +102,13 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "Ara :";
             // 
-            // tbxColorSearch
+            // tbxSearch
             // 
-            this.tbxColorSearch.Location = new System.Drawing.Point(152, 17);
-            this.tbxColorSearch.Name = "tbxColorSearch";
-            this.tbxColorSearch.Size = new System.Drawing.Size(100, 20);
-            this.tbxColorSearch.TabIndex = 15;
+            this.tbxSearch.Location = new System.Drawing.Point(152, 17);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
+            this.tbxSearch.TabIndex = 15;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // dgwColors
             // 
@@ -164,7 +165,7 @@
             this.Controls.Add(this.btnColorDelete);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbxColorSearch);
+            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.dgwColors);
             this.Name = "ColorForm";
             this.Text = "ColorForm";
@@ -187,7 +188,7 @@
         private System.Windows.Forms.TextBox tbxColorName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbxColorSearch;
+        private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.DataGridView dgwColors;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnColorUpdate;

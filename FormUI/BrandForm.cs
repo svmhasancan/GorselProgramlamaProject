@@ -31,6 +31,11 @@ namespace FormUI
             dgwBrands.DataSource = brandsTable;
         }
 
+        private void ListBrandByBrandName(string searchedText)
+        {
+            dgwBrands.DataSource = linqBrandDal.GetBrand(searchedText);
+        }
+
         private void btnBrandAdd_Click(object sender, EventArgs e)
         {
             linqBrandDal.Add(new Brand
@@ -64,6 +69,20 @@ namespace FormUI
             linqBrandDal.Delete(id);
             LoadBrands();
             MessageBox.Show("Marka Silindi");
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchedText = tbxSearch.Text;
+
+            if (string.IsNullOrEmpty(searchedText))
+            {
+                LoadBrands();
+            }
+            else
+            {
+                ListBrandByBrandName(searchedText);
+            }
         }
     }
 }

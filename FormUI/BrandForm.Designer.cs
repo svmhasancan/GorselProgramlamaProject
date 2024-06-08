@@ -38,7 +38,7 @@
             this.tbxBrandName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbxBrandSearch = new System.Windows.Forms.TextBox();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
             this.dgwBrands = new System.Windows.Forms.DataGridView();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -140,12 +140,13 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Ara :";
             // 
-            // tbxBrandSearch
+            // tbxSearch
             // 
-            this.tbxBrandSearch.Location = new System.Drawing.Point(174, 23);
-            this.tbxBrandSearch.Name = "tbxBrandSearch";
-            this.tbxBrandSearch.Size = new System.Drawing.Size(100, 20);
-            this.tbxBrandSearch.TabIndex = 21;
+            this.tbxSearch.Location = new System.Drawing.Point(174, 23);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(100, 20);
+            this.tbxSearch.TabIndex = 21;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
             // 
             // dgwBrands
             // 
@@ -164,7 +165,7 @@
             this.Controls.Add(this.btnBrandDelete);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbxBrandSearch);
+            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.dgwBrands);
             this.Name = "BrandForm";
             this.Text = "BrandForm";
@@ -191,7 +192,7 @@
         private System.Windows.Forms.TextBox tbxBrandName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox tbxBrandSearch;
+        private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.DataGridView dgwBrands;
     }
 }

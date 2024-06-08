@@ -31,7 +31,7 @@ namespace DataAccess.Concretes.Linq
                     Id = Convert.ToInt32(reader["Id"]),
                     UserName = reader["UserName"].ToString(),
                     Password = reader["Password"].ToString(),
-                    Role = reader["Role"].ToString() // Role alanını doğru alana güncelledim
+                    Role = reader["Role"].ToString() // Role alanı doğru alana güncellendi
                 };
                 users.Add(user);
             }

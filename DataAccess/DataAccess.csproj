@@ -47,6 +47,7 @@
     <Compile Include="Concretes\Linq\LinqBrandDal.cs" />
     <Compile Include="Concretes\Linq\LinqCarDal.cs" />
     <Compile Include="Concretes\Linq\LinqColorDal.cs" />
+    <Compile Include="Concretes\Linq\LinqRentalDal.cs" />
     <Compile Include="Concretes\Linq\LinqUserDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

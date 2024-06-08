@@ -43,9 +43,8 @@ namespace FormUI
                 }
                 else
                 {
-                    // Kullanıcı admin değilse farklı bir form (örneğin UserForm) açıyoruz
-                    //UserForm userForm = new UserForm();
-                    //userForm.Show();
+                    RentACar rentACar = new RentACar(users.First().Id);
+                    rentACar.Show();
                 }
 
                 // Mevcut formu kapatıyoruz

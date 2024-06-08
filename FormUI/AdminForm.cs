@@ -34,5 +34,12 @@ namespace FormUI
             BrandForm brandForm = new BrandForm();
             brandForm.ShowDialog();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm();
+            mainForm.Show();
+            this.Hide();
+        }
     }
 }

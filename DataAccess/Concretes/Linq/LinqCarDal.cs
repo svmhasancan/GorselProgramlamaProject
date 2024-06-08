@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
@@ -26,7 +27,8 @@ namespace DataAccess.Concretes.Linq
                     c.Name,
                     c.ModelYear,
                     c.DailyPrice,
-                    c.Description
+                    c.Description,
+                    c.IsRented
                 FROM 
                     Cars c
                 JOIN 
@@ -46,7 +48,7 @@ namespace DataAccess.Concretes.Linq
         public void Add(Car car)
         {
             ConnectionControl();
-            SqlCommand command = new SqlCommand("INSERT INTO Cars(BrandId, ColorId, Name, ModelYear, DailyPrice, Description) VALUES(@brandId, @colorId, @name, @modelYear, @dailyPrice, @description)", connection);
+            SqlCommand command = new SqlCommand("INSERT INTO Cars(BrandId, ColorId, Name, ModelYear, DailyPrice, Description, IsRented) VALUES(@brandId, @colorId, @name, @modelYear, @dailyPrice, @description, null)", connection);
 
             command.Parameters.AddWithValue("@brandId", car.BrandId);
             command.Parameters.AddWithValue("@colorId", car.ColorId);
@@ -62,13 +64,14 @@ namespace DataAccess.Concretes.Linq
         public void Update(Car car)
         {
             ConnectionControl();
-            SqlCommand command = new SqlCommand("Update Cars set Name=@name,BrandId=@brandId,ColorId=@colorId,ModelYear=@modelYear,DailyPrice=@dailyPrice,Description=@description where CarId=@carId",connection);
+            SqlCommand command = new SqlCommand("Update Cars set Name=@name,BrandId=@brandId,ColorId=@colorId,ModelYear=@modelYear,DailyPrice=@dailyPrice,Description=@description,IsRented=@isRented where CarId=@carId", connection);
             command.Parameters.AddWithValue("@name", car.Name);
             command.Parameters.AddWithValue("@brandId", car.BrandId);
             command.Parameters.AddWithValue("@colorId", car.ColorId);
             command.Parameters.AddWithValue("@modelYear", car.ModelYear);
             command.Parameters.AddWithValue("@dailyPrice", car.DailyPrice);
             command.Parameters.AddWithValue("@description", car.Description);
+            command.Parameters.AddWithValue("@isRented", car.IsRented);
             command.Parameters.AddWithValue("@carId", car.CarId);
             command.ExecuteNonQuery();
 
@@ -78,10 +81,44 @@ namespace DataAccess.Concretes.Linq
         public void Delete(int id)
         {
             ConnectionControl();
-            SqlCommand command = new SqlCommand("Delete from Cars where CarId=@id",connection);
+            SqlCommand command = new SqlCommand("Delete from Cars where CarId=@id", connection);
             command.Parameters.AddWithValue("@id", id);
             command.ExecuteNonQuery();
             connection.Close();
+        }
+
+        public DataTable GetCars(string searchText)
+        {
+            ConnectionControl();
+            DataTable dataTable = new DataTable();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Cars WHERE Name LIKE @searchText", connection);
+
+            // Parametreye arama metnini % ile ekleyerek sorguya ekliyoruz
+            command.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+            dataAdapter.Fill(dataTable);
+            connection.Close();
+            return dataTable;
+        }
+
+        public DataTable GetCarsByBrand(string brandName)
+        {
+            ConnectionControl();
+
+            SqlCommand command = new SqlCommand("SELECT * FROM Cars c JOIN Brands b ON c.BrandId = b.BrandId WHERE b.BrandName =@brandName", connection);
+            command.Parameters.AddWithValue("@brandName",brandName);
+
+            DataTable dataTable = new DataTable();
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(command);
+
+            dataAdapter.Fill(dataTable);
+
+            connection.Close();
+            return dataTable;
         }
 
         private void ConnectionControl()

@@ -31,6 +31,7 @@
             this.btnCar = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnBrand = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCar
@@ -47,8 +48,9 @@
             // 
             // btnColor
             // 
-            this.btnColor.BackColor = System.Drawing.Color.Yellow;
+            this.btnColor.BackColor = System.Drawing.Color.Gold;
             this.btnColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnColor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnColor.Location = new System.Drawing.Point(250, -1);
             this.btnColor.Name = "btnColor";
             this.btnColor.Size = new System.Drawing.Size(277, 450);
@@ -69,14 +71,30 @@
             this.btnBrand.UseVisualStyleBackColor = false;
             this.btnBrand.Click += new System.EventHandler(this.btnBrand_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Green;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExit.Location = new System.Drawing.Point(713, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "Çıkış Yap";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnBrand);
             this.Controls.Add(this.btnColor);
             this.Controls.Add(this.btnCar);
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Name = "AdminForm";
             this.Text = "Admin İşlemleri";
             this.ResumeLayout(false);
@@ -88,5 +106,6 @@
         private System.Windows.Forms.Button btnCar;
         private System.Windows.Forms.Button btnColor;
         private System.Windows.Forms.Button btnBrand;
+        private System.Windows.Forms.Button btnExit;
     }
 }

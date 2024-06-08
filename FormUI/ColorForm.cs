@@ -33,6 +33,11 @@ namespace FormUI
             dgwColors.DataSource = colorsTable;
         }
 
+        private void ListColorsByColorName(string key)
+        {
+            dgwColors.DataSource = linqColorDal.GetColor(key);
+        }
+
         private void btnColorAdd_Click(object sender, EventArgs e)
         {
             linqColorDal.Add(new Color
@@ -67,6 +72,20 @@ namespace FormUI
             linqColorDal.Delete(id);
             LoadColors();
             MessageBox.Show("Renk Silindi!");
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            string searchedKey = tbxSearch.Text;
+
+            if (string.IsNullOrEmpty(searchedKey))
+            {
+                LoadColors();
+            }
+            else
+            {
+                ListColorsByColorName(searchedKey);
+            }
         }
     }
 }
