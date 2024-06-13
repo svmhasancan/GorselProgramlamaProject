@@ -1,4 +1,4 @@
-﻿using DataAccess.Concretes.Linq;
+﻿using DataAccess.Linq;
 using Entities;
 using System;
 using System.Collections.Generic;
@@ -44,9 +44,9 @@ namespace FormUI
             {
                 ColorName = tbxColorName.Text
             });
-            MessageBox.Show("Renk Eklendi");
-            //ClearInputs();
+            ClearInputs();
             LoadColors();
+            MessageBox.Show("Renk Eklendi");
         }
 
         private void btnColorUpdate_Click(object sender, EventArgs e)
@@ -57,8 +57,15 @@ namespace FormUI
                 ColorName = tbxColorNameUpdate.Text
             };
             linqColorDal.Update(color);
+            ClearInputs();
             LoadColors();
             MessageBox.Show("Renk Güncellendi!");
+        }
+
+        private void ClearInputs()
+        {
+            tbxColorName.Text = "";
+            tbxColorNameUpdate.Text = "";
         }
 
         private void dgwColors_CellClick(object sender, DataGridViewCellEventArgs e)

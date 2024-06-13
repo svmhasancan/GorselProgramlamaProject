@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccess.Concretes.Linq;
+using DataAccess.Linq;
 using Entities;
 
 namespace FormUI

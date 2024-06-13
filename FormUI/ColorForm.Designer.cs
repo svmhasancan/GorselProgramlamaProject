@@ -47,12 +47,13 @@
             // 
             // btnColorDelete
             // 
-            this.btnColorDelete.Location = new System.Drawing.Point(303, 188);
+            this.btnColorDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(83)))), ((int)(((byte)(79)))));
+            this.btnColorDelete.Location = new System.Drawing.Point(164, 231);
             this.btnColorDelete.Name = "btnColorDelete";
             this.btnColorDelete.Size = new System.Drawing.Size(88, 24);
             this.btnColorDelete.TabIndex = 18;
             this.btnColorDelete.Text = "Sil";
-            this.btnColorDelete.UseVisualStyleBackColor = true;
+            this.btnColorDelete.UseVisualStyleBackColor = false;
             this.btnColorDelete.Click += new System.EventHandler(this.btnColorDelete_Click);
             // 
             // groupBox1
@@ -60,7 +61,7 @@
             this.groupBox1.Controls.Add(this.btnColorAdd);
             this.groupBox1.Controls.Add(this.tbxColorName);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 232);
+            this.groupBox1.Location = new System.Drawing.Point(279, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(206, 106);
             this.groupBox1.TabIndex = 17;
@@ -69,16 +70,18 @@
             // 
             // btnColorAdd
             // 
+            this.btnColorAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(200)))), ((int)(((byte)(92)))));
             this.btnColorAdd.Location = new System.Drawing.Point(68, 66);
             this.btnColorAdd.Name = "btnColorAdd";
             this.btnColorAdd.Size = new System.Drawing.Size(75, 23);
             this.btnColorAdd.TabIndex = 12;
             this.btnColorAdd.Text = "Ekle";
-            this.btnColorAdd.UseVisualStyleBackColor = true;
+            this.btnColorAdd.UseVisualStyleBackColor = false;
             this.btnColorAdd.Click += new System.EventHandler(this.btnColorAdd_Click);
             // 
             // tbxColorName
             // 
+            this.tbxColorName.BackColor = System.Drawing.Color.Silver;
             this.tbxColorName.Location = new System.Drawing.Point(77, 24);
             this.tbxColorName.Name = "tbxColorName";
             this.tbxColorName.Size = new System.Drawing.Size(100, 20);
@@ -104,6 +107,7 @@
             // 
             // tbxSearch
             // 
+            this.tbxSearch.BackColor = System.Drawing.Color.Silver;
             this.tbxSearch.Location = new System.Drawing.Point(152, 17);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
@@ -123,7 +127,7 @@
             this.groupBox2.Controls.Add(this.btnColorUpdate);
             this.groupBox2.Controls.Add(this.tbxColorNameUpdate);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(247, 232);
+            this.groupBox2.Location = new System.Drawing.Point(279, 176);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(206, 106);
             this.groupBox2.TabIndex = 18;
@@ -132,16 +136,18 @@
             // 
             // btnColorUpdate
             // 
+            this.btnColorUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(173)))), ((int)(((byte)(78)))));
             this.btnColorUpdate.Location = new System.Drawing.Point(68, 66);
             this.btnColorUpdate.Name = "btnColorUpdate";
             this.btnColorUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnColorUpdate.TabIndex = 12;
             this.btnColorUpdate.Text = "Güncelle";
-            this.btnColorUpdate.UseVisualStyleBackColor = true;
+            this.btnColorUpdate.UseVisualStyleBackColor = false;
             this.btnColorUpdate.Click += new System.EventHandler(this.btnColorUpdate_Click);
             // 
             // tbxColorNameUpdate
             // 
+            this.tbxColorNameUpdate.BackColor = System.Drawing.Color.Silver;
             this.tbxColorNameUpdate.Location = new System.Drawing.Point(77, 24);
             this.tbxColorNameUpdate.Name = "tbxColorNameUpdate";
             this.tbxColorNameUpdate.Size = new System.Drawing.Size(100, 20);
@@ -160,7 +166,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 371);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(497, 311);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnColorDelete);
             this.Controls.Add(this.groupBox1);
@@ -168,7 +175,7 @@
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.dgwColors);
             this.Name = "ColorForm";
-            this.Text = "ColorForm";
+            this.Text = "Renk İşlemleri";
             this.Load += new System.EventHandler(this.ColorForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

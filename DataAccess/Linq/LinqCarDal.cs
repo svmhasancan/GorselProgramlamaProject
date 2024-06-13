@@ -8,12 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using DataAccess.Abstracts;
 using Entities;
 
-namespace DataAccess.Concretes.Linq
+namespace DataAccess.Linq
 {
-    public class LinqCarDal : ICarDal
+    public class LinqCarDal
     {
         private SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=RentACar;Trusted_Connection=True;");
 
@@ -36,11 +35,11 @@ namespace DataAccess.Concretes.Linq
                 JOIN 
                     Colors col ON c.ColorId = col.ColorId";
 
-            // veri adaptörü
+            
             SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-            //veri tablosu
+            
             DataTable dataTable = new DataTable();
-            // veriyi doldur
+            
             dataAdapter.Fill(dataTable);
             return dataTable;
         }
@@ -94,7 +93,6 @@ namespace DataAccess.Concretes.Linq
 
             SqlCommand command = new SqlCommand("SELECT * FROM Cars WHERE Name LIKE @searchText", connection);
 
-            // Parametreye arama metnini % ile ekleyerek sorguya ekliyoruz
             command.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
 
             SqlDataAdapter dataAdapter = new SqlDataAdapter(command);

@@ -7,12 +7,11 @@ using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess.Abstracts;
 using Entities;
 
-namespace DataAccess.Concretes.Linq
+namespace DataAccess.Linq
 {
-    public class LinqColorDal:IColorDal
+    public class LinqColorDal
     {
         private SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=RentACar;Trusted_Connection=True;");
         public DataTable GetAll()

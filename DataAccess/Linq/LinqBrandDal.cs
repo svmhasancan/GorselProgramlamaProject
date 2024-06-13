@@ -5,12 +5,11 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DataAccess.Abstracts;
 using Entities;
 
-namespace DataAccess.Concretes.Linq
+namespace DataAccess.Linq
 {
-    public class LinqBrandDal:IBrandDal
+    public class LinqBrandDal
     {
         private SqlConnection connection = new SqlConnection(@"Server=.\SQLEXPRESS;Database=RentACar;Trusted_Connection=True;");
 
@@ -28,7 +27,6 @@ namespace DataAccess.Concretes.Linq
 
         public void Add(Brand brand)
         {
-            // Id hatası burda da var
             ConnectionControl();
             SqlCommand command = new SqlCommand("INSERT INTO Brands(BrandId, BrandName) VALUES(@brandId, @brandName)", connection);
 

@@ -49,6 +49,7 @@
             // 
             // cbxBrands
             // 
+            this.cbxBrands.BackColor = System.Drawing.Color.Silver;
             this.cbxBrands.FormattingEnabled = true;
             this.cbxBrands.Location = new System.Drawing.Point(135, 20);
             this.cbxBrands.Name = "cbxBrands";
@@ -65,6 +66,7 @@
             // 
             // tbxSearch
             // 
+            this.tbxSearch.BackColor = System.Drawing.Color.Silver;
             this.tbxSearch.Location = new System.Drawing.Point(651, 25);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
@@ -110,16 +112,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(234, 275);
+            this.label2.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(237, 275);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 15);
+            this.label2.Size = new System.Drawing.Size(178, 18);
             this.label2.TabIndex = 7;
             this.label2.Text = "Kiralama Başlangıç Tarihi :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(113, 13);
@@ -129,20 +133,22 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(269, 329);
+            this.label5.Font = new System.Drawing.Font("Corbel", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(270, 329);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(146, 15);
+            this.label5.Size = new System.Drawing.Size(145, 18);
             this.label5.TabIndex = 10;
             this.label5.Text = "Kiralama Bitiş Tarihi :";
             // 
             // lblAmount
             // 
             this.lblAmount.AutoSize = true;
-            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAmount.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblAmount.ForeColor = System.Drawing.Color.White;
             this.lblAmount.Location = new System.Drawing.Point(460, 388);
             this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(0, 20);
+            this.lblAmount.Size = new System.Drawing.Size(0, 19);
             this.lblAmount.TabIndex = 12;
             // 
             // btnDeliverCar
@@ -160,9 +166,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Orange;
+            this.btnExit.BackColor = System.Drawing.Color.Silver;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnExit.Location = new System.Drawing.Point(837, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(82, 25);
@@ -186,7 +192,7 @@
             // btnRemoveFilters
             // 
             this.btnRemoveFilters.BackColor = System.Drawing.Color.Crimson;
-            this.btnRemoveFilters.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRemoveFilters.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnRemoveFilters.Location = new System.Drawing.Point(181, 47);
             this.btnRemoveFilters.Name = "btnRemoveFilters";
             this.btnRemoveFilters.Size = new System.Drawing.Size(82, 25);
@@ -197,10 +203,10 @@
             // 
             // btnCalculate
             // 
-            this.btnCalculate.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnCalculate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(222)))));
             this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCalculate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnCalculate.Location = new System.Drawing.Point(394, 437);
+            this.btnCalculate.Location = new System.Drawing.Point(393, 437);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(105, 37);
             this.btnCalculate.TabIndex = 18;
@@ -212,7 +218,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(81)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(919, 486);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.btnRemoveFilters);
@@ -231,7 +237,7 @@
             this.Controls.Add(this.dgwRentals);
             this.Controls.Add(this.cbxBrands);
             this.Name = "RentACar";
-            this.Text = "RentACar";
+            this.Text = "Araba Kirala";
             this.Load += new System.EventHandler(this.RentACar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwRentals)).EndInit();
             this.ResumeLayout(false);

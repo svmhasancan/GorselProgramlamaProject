@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess.Concretes.Linq
+namespace DataAccess.Linq
 {
     public class LinqRentalDal
     {

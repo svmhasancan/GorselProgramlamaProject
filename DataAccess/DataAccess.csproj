@@ -41,14 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstracts\IBrandDal.cs" />
-    <Compile Include="Abstracts\ICarDal.cs" />
-    <Compile Include="Abstracts\IColorDal.cs" />
-    <Compile Include="Concretes\Linq\LinqBrandDal.cs" />
-    <Compile Include="Concretes\Linq\LinqCarDal.cs" />
-    <Compile Include="Concretes\Linq\LinqColorDal.cs" />
-    <Compile Include="Concretes\Linq\LinqRentalDal.cs" />
-    <Compile Include="Concretes\Linq\LinqUserDal.cs" />
+    <Compile Include="Linq\LinqBrandDal.cs" />
+    <Compile Include="Linq\LinqCarDal.cs" />
+    <Compile Include="Linq\LinqColorDal.cs" />
+    <Compile Include="Linq\LinqRentalDal.cs" />
+    <Compile Include="Linq\LinqUserDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

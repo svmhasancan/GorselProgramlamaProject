@@ -50,7 +50,7 @@
             this.groupBox2.Controls.Add(this.btnBrandUpdate);
             this.groupBox2.Controls.Add(this.tbxBrandNameUpdate);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(269, 238);
+            this.groupBox2.Location = new System.Drawing.Point(302, 174);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(206, 106);
             this.groupBox2.TabIndex = 24;
@@ -59,12 +59,13 @@
             // 
             // btnBrandUpdate
             // 
+            this.btnBrandUpdate.BackColor = System.Drawing.Color.Yellow;
             this.btnBrandUpdate.Location = new System.Drawing.Point(68, 66);
             this.btnBrandUpdate.Name = "btnBrandUpdate";
             this.btnBrandUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnBrandUpdate.TabIndex = 12;
             this.btnBrandUpdate.Text = "Güncelle";
-            this.btnBrandUpdate.UseVisualStyleBackColor = true;
+            this.btnBrandUpdate.UseVisualStyleBackColor = false;
             this.btnBrandUpdate.Click += new System.EventHandler(this.btnBrandUpdate_Click);
             // 
             // tbxBrandNameUpdate
@@ -85,12 +86,13 @@
             // 
             // btnBrandDelete
             // 
-            this.btnBrandDelete.Location = new System.Drawing.Point(325, 194);
+            this.btnBrandDelete.BackColor = System.Drawing.Color.Red;
+            this.btnBrandDelete.Location = new System.Drawing.Point(186, 239);
             this.btnBrandDelete.Name = "btnBrandDelete";
             this.btnBrandDelete.Size = new System.Drawing.Size(88, 24);
             this.btnBrandDelete.TabIndex = 25;
             this.btnBrandDelete.Text = "Sil";
-            this.btnBrandDelete.UseVisualStyleBackColor = true;
+            this.btnBrandDelete.UseVisualStyleBackColor = false;
             this.btnBrandDelete.Click += new System.EventHandler(this.btnBrandDelete_Click);
             // 
             // groupBox1
@@ -98,7 +100,7 @@
             this.groupBox1.Controls.Add(this.btnBrandAdd);
             this.groupBox1.Controls.Add(this.tbxBrandName);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(34, 238);
+            this.groupBox1.Location = new System.Drawing.Point(302, 40);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(206, 106);
             this.groupBox1.TabIndex = 23;
@@ -107,16 +109,19 @@
             // 
             // btnBrandAdd
             // 
+            this.btnBrandAdd.BackColor = System.Drawing.Color.Lime;
+            this.btnBrandAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnBrandAdd.Location = new System.Drawing.Point(68, 66);
             this.btnBrandAdd.Name = "btnBrandAdd";
             this.btnBrandAdd.Size = new System.Drawing.Size(75, 23);
             this.btnBrandAdd.TabIndex = 12;
             this.btnBrandAdd.Text = "Ekle";
-            this.btnBrandAdd.UseVisualStyleBackColor = true;
+            this.btnBrandAdd.UseVisualStyleBackColor = false;
             this.btnBrandAdd.Click += new System.EventHandler(this.btnBrandAdd_Click);
             // 
             // tbxBrandName
             // 
+            this.tbxBrandName.BackColor = System.Drawing.Color.Silver;
             this.tbxBrandName.Location = new System.Drawing.Point(77, 24);
             this.tbxBrandName.Name = "tbxBrandName";
             this.tbxBrandName.Size = new System.Drawing.Size(100, 20);
@@ -142,6 +147,7 @@
             // 
             // tbxSearch
             // 
+            this.tbxSearch.BackColor = System.Drawing.Color.Silver;
             this.tbxSearch.Location = new System.Drawing.Point(174, 23);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
@@ -160,7 +166,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 374);
+            this.BackColor = System.Drawing.Color.Cyan;
+            this.ClientSize = new System.Drawing.Size(520, 311);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnBrandDelete);
             this.Controls.Add(this.groupBox1);
@@ -168,7 +175,7 @@
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.dgwBrands);
             this.Name = "BrandForm";
-            this.Text = "BrandForm";
+            this.Text = "Marka İşlemleri";
             this.Load += new System.EventHandler(this.BrandForm_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

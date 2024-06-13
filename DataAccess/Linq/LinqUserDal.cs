@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Entities;
 
-namespace DataAccess.Concretes.Linq
+namespace DataAccess.Linq
 {
     public class LinqUserDal
     {
@@ -31,7 +31,7 @@ namespace DataAccess.Concretes.Linq
                     Id = Convert.ToInt32(reader["Id"]),
                     UserName = reader["UserName"].ToString(),
                     Password = reader["Password"].ToString(),
-                    Role = reader["Role"].ToString() // Role alanı doğru alana güncellendi
+                    Role = reader["Role"].ToString()
                 };
                 users.Add(user);
             }

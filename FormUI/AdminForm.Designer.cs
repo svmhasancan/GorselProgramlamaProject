@@ -36,7 +36,7 @@
             // 
             // btnCar
             // 
-            this.btnCar.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCar.BackColor = System.Drawing.Color.OrangeRed;
             this.btnCar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnCar.Location = new System.Drawing.Point(-4, -1);
             this.btnCar.Name = "btnCar";
@@ -48,7 +48,7 @@
             // 
             // btnColor
             // 
-            this.btnColor.BackColor = System.Drawing.Color.Gold;
+            this.btnColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
             this.btnColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnColor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnColor.Location = new System.Drawing.Point(250, -1);
@@ -61,7 +61,7 @@
             // 
             // btnBrand
             // 
-            this.btnBrand.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnBrand.BackColor = System.Drawing.Color.Cyan;
             this.btnBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnBrand.Location = new System.Drawing.Point(523, -1);
             this.btnBrand.Name = "btnBrand";
@@ -73,14 +73,14 @@
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Green;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExit.Location = new System.Drawing.Point(713, 12);
+            this.btnExit.BackColor = System.Drawing.Color.Silver;
+            this.btnExit.Font = new System.Drawing.Font("Corbel", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExit.Location = new System.Drawing.Point(709, 12);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(79, 27);
             this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Çıkış Yap";
+            this.btnExit.Text = "Çıkış  Yap";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 

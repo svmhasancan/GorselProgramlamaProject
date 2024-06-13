@@ -75,6 +75,7 @@
             // 
             // tbxSearch
             // 
+            this.tbxSearch.BackColor = System.Drawing.Color.Silver;
             this.tbxSearch.Location = new System.Drawing.Point(668, 7);
             this.tbxSearch.Name = "tbxSearch";
             this.tbxSearch.Size = new System.Drawing.Size(100, 20);
@@ -115,7 +116,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 161);
+            this.label7.Location = new System.Drawing.Point(12, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 13);
             this.label7.TabIndex = 13;
@@ -124,7 +125,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 195);
+            this.label6.Location = new System.Drawing.Point(12, 188);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 13);
             this.label6.TabIndex = 13;
@@ -132,26 +133,29 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.Lime;
             this.btnAdd.Location = new System.Drawing.Point(213, 195);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Ekle";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // cbxColor
             // 
+            this.cbxColor.BackColor = System.Drawing.Color.White;
             this.cbxColor.FormattingEnabled = true;
-            this.cbxColor.Location = new System.Drawing.Point(92, 90);
+            this.cbxColor.Location = new System.Drawing.Point(92, 85);
             this.cbxColor.Name = "cbxColor";
             this.cbxColor.Size = new System.Drawing.Size(100, 21);
             this.cbxColor.TabIndex = 11;
             // 
             // cbxBrand
             // 
+            this.cbxBrand.BackColor = System.Drawing.Color.White;
             this.cbxBrand.FormattingEnabled = true;
-            this.cbxBrand.Location = new System.Drawing.Point(92, 55);
+            this.cbxBrand.Location = new System.Drawing.Point(92, 50);
             this.cbxBrand.Name = "cbxBrand";
             this.cbxBrand.Size = new System.Drawing.Size(100, 21);
             this.cbxBrand.TabIndex = 10;
@@ -165,7 +169,7 @@
             // 
             // tbxModelYear
             // 
-            this.tbxModelYear.Location = new System.Drawing.Point(92, 124);
+            this.tbxModelYear.Location = new System.Drawing.Point(92, 120);
             this.tbxModelYear.Name = "tbxModelYear";
             this.tbxModelYear.Size = new System.Drawing.Size(100, 20);
             this.tbxModelYear.TabIndex = 8;
@@ -179,6 +183,7 @@
             // 
             // tbxName
             // 
+            this.tbxName.BackColor = System.Drawing.Color.White;
             this.tbxName.Location = new System.Drawing.Point(92, 19);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(100, 20);
@@ -187,7 +192,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 131);
+            this.label5.Location = new System.Drawing.Point(12, 123);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 3;
@@ -196,7 +201,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 93);
+            this.label4.Location = new System.Drawing.Point(12, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 2;
@@ -205,7 +210,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 63);
+            this.label3.Location = new System.Drawing.Point(12, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 1;
@@ -214,7 +219,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 27);
+            this.label2.Location = new System.Drawing.Point(12, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 13);
             this.label2.TabIndex = 0;
@@ -244,18 +249,19 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Yellow;
             this.btnUpdate.Location = new System.Drawing.Point(213, 195);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 23);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Güncelle";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // cbxColorUpdate
             // 
             this.cbxColorUpdate.FormattingEnabled = true;
-            this.cbxColorUpdate.Location = new System.Drawing.Point(92, 90);
+            this.cbxColorUpdate.Location = new System.Drawing.Point(92, 85);
             this.cbxColorUpdate.Name = "cbxColorUpdate";
             this.cbxColorUpdate.Size = new System.Drawing.Size(100, 21);
             this.cbxColorUpdate.TabIndex = 11;
@@ -263,7 +269,7 @@
             // cbxBrandUpdate
             // 
             this.cbxBrandUpdate.FormattingEnabled = true;
-            this.cbxBrandUpdate.Location = new System.Drawing.Point(92, 55);
+            this.cbxBrandUpdate.Location = new System.Drawing.Point(92, 50);
             this.cbxBrandUpdate.Name = "cbxBrandUpdate";
             this.cbxBrandUpdate.Size = new System.Drawing.Size(100, 21);
             this.cbxBrandUpdate.TabIndex = 10;
@@ -277,7 +283,7 @@
             // 
             // tbxModelYearUpdate
             // 
-            this.tbxModelYearUpdate.Location = new System.Drawing.Point(92, 124);
+            this.tbxModelYearUpdate.Location = new System.Drawing.Point(92, 120);
             this.tbxModelYearUpdate.Name = "tbxModelYearUpdate";
             this.tbxModelYearUpdate.Size = new System.Drawing.Size(100, 20);
             this.tbxModelYearUpdate.TabIndex = 8;
@@ -299,7 +305,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 195);
+            this.label8.Location = new System.Drawing.Point(12, 191);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 13);
             this.label8.TabIndex = 5;
@@ -317,7 +323,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 131);
+            this.label10.Location = new System.Drawing.Point(13, 123);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(42, 13);
             this.label10.TabIndex = 3;
@@ -326,7 +332,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 93);
+            this.label11.Location = new System.Drawing.Point(13, 88);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(39, 13);
             this.label11.TabIndex = 2;
@@ -335,7 +341,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 63);
+            this.label12.Location = new System.Drawing.Point(12, 53);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 13);
             this.label12.TabIndex = 1;
@@ -344,7 +350,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(15, 27);
+            this.label13.Location = new System.Drawing.Point(12, 22);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(34, 13);
             this.label13.TabIndex = 0;
@@ -352,18 +358,20 @@
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.Location = new System.Drawing.Point(680, 201);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(88, 24);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Sil";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // CarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.OrangeRed;
             this.ClientSize = new System.Drawing.Size(823, 458);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.groupBox2);
@@ -372,7 +380,7 @@
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.dgwCars);
             this.Name = "CarForm";
-            this.Text = "Form1";
+            this.Text = "Araba İşlemleri";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCars)).EndInit();
             this.groupBox1.ResumeLayout(false);
